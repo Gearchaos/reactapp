@@ -31,6 +31,10 @@ class NewsComments extends React.Component {
 		      console.log(error.message);
 		 })
   }
+  //更新props获得新的uerId,重新加载评论	
+  componentWillReceiveProps(nextProps){
+     this.componentWillMount();
+  }	
   //提交评论
   handleSubmit = (event) => {
      event.preventDefault();
